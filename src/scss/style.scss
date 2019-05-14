@@ -1,0 +1,116 @@
+/*-------------------------- V A R I A B L E S ------------------------------*/
+
+$white: #ffffff;
+$purple: #8d81ac;
+$grey: #848e97;
+$black: #000;
+$font: "Montserrat", sans-serif;
+
+/*-------------------------- C O N T A I N E R S------------------------------*/
+
+
+
+
+/*---------------------------- @ M I X I N S --------------------------------*/
+
+@mixin flex($jc, $ai) {
+  display: flex;
+  @if $jc == c {
+    justify-content: center;
+  } @else if $jc == sa {
+    justify-content: space-around;
+  } @else if $jc == sb {
+    justify-content: space-between;
+  } @else if $jc == fs {
+    justify-content: flex-start;
+  } @else if $jc == fe {
+    justify-content: flex-end;
+  }
+
+  @if $ai == c {
+    align-items: center;
+  } @else if $ai == sa {
+    align-items: space-around;
+  } @else if $ai == sb {
+    align-items: space-between;
+  } @else if $ai == fs {
+    align-items: flex-start;
+  } @else if $ai == fe {
+    align-items: flex-end;
+  }
+}
+@mixin comboflex($jc1, $ai1, $jc2, $ai2) {
+  display: flex;
+  @if $jc1 == c {
+    justify-content: center;
+  } @else if $jc1 == sa {
+    justify-content: space-around;
+  } @else if $jc1 == sb {
+    justify-content: space-between;
+  } @else if $jc1 == fs {
+    justify-content: flex-start;
+  } @else if $jc1 == fe {
+    justify-content: flex-end;
+  }
+
+  @if $ai1 == c {
+    align-items: center;
+  } @else if $ai1 == sa {
+    align-items: space-around;
+  } @else if $ai1 == sb {
+    align-items: space-between;
+  } @else if $ai1 == fs {
+    align-items: flex-start;
+  } @else if $ai1 == fe {
+    align-items: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    @if $jc2 == c {
+      justify-content: center;
+    } @else if $jc2 == sa {
+      justify-content: space-around;
+    } @else if $jc2 == sb {
+      justify-content: space-between;
+    } @else if $jc2 == fs {
+      justify-content: flex-start;
+    } @else if $jc2 == fe {
+      justify-content: flex-end;
+    }
+
+    @if $ai2 == c {
+      align-items: center;
+    } @else if $ai2 == sa {
+      align-items: space-around;
+    } @else if $ai2 == sb {
+      align-items: space-between;
+    } @else if $ai2 == fs {
+      align-items: flex-start;
+    } @else if $ai2 == fe {
+      align-items: flex-end;
+    }
+  }
+}
+///ADDED PX IN FONT-SIZE///
+@mixin text($ff, $co, $fs, $fw, $ta, $tt) {
+	font-family: $ff, sans-serif;
+	color: $co;
+	font-size: $fs+px;
+	font-weight: $fw;
+	text-align: $ta;
+	text-transform: $tt;
+}
+
+/*---------------------------- @ E X T E N D --------------------------------*/
+
+/*------------------ R E P E T I T I V E      S E L E C T O R S --------------*/
+
+/*---------------------------- @ I M P O R T --------------------------------*/
+
+@import "reset.scss";
+@import "fonts.scss";
+@import "sections/header";
+@import "sections/revolutionary";
+@import "sections/people";
+@import "sections/subscription";

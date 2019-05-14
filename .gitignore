@@ -1,0 +1,7 @@
+
+/node_modules
+/.idea
+*.iml
+*.xml
+node_modules/**/*
+build/**/*

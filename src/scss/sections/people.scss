@@ -1,0 +1,119 @@
+.people {
+  background: url("../../img/header/testmonials-bg.png") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  font-family: "Montserrad", sans-serif;
+  box-sizing: border-box;
+  min-width: 320px;
+  border-bottom: 2px solid #848e97;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto 10px;
+  }
+
+  &__heading {
+    font-size: 48px;
+    margin: 80px 0 20px;
+    color: #fff;
+    flex-basis: 100%;
+  }
+
+  &__companies {
+    flex-basis: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__companies:nth-child(7) {
+    padding-bottom: 45px;
+  }
+
+  &__companies-img {
+    width: max-content;
+  }
+
+  &__companies-text {
+    color: $white;
+    font-size: 18px;
+    padding-top: 25px;
+    line-height: 30px;
+    font-style: italic;
+  }
+
+  &__footer {
+    flex-basis: 100%;
+    border-bottom: 2px solid $grey;
+    text-align: center;
+    display: none;
+    margin-top: 50px;
+  }
+
+  &__footer-text {
+    font-size: 14px;
+    color: $grey;
+  }
+}
+
+@media (min-width: 481px) {
+
+  .people {
+
+    &__container {
+      justify-content: space-between;
+    }
+
+    &__companies {
+      flex-basis: 45%;
+      padding-top: 80px;
+    }
+
+    &__companies:nth-child(3) {
+      padding-top: 65px;
+    }
+
+    &__companies:nth-child(4) {
+      padding-top: 35px;
+    }
+
+    &__heading {
+      margin: 80px 0 0;
+    }
+
+    &__companies-text {
+      font-size: 16px;
+    }
+
+    &__companies-text:nth-child(3) {
+      padding-top: 35px;
+    }
+
+    &__footer {
+
+      display: block;
+    }
+  }
+}
+
+  @media (min-width: 993px) {
+    .people {
+
+      &__companies:nth-child(7) {
+        padding-bottom: 0;
+      }
+
+      &__companies {
+        flex-basis: 29%;
+        padding-top: 80px;
+      }
+    }
+  }

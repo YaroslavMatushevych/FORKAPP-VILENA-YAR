@@ -1,0 +1,41 @@
+{
+  "name": "forkapp-vilena-yarma",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavMatushevych/FORKAPP-VILENA-YARMA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaroslavMatushevych/FORKAPP-VILENA-YARMA/issues"
+  },
+  "homepage": "https://github.com/YaroslavMatushevych/FORKAPP-VILENA-YARMA#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.1.7"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "gulp-file-include": "^2.0.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "description": ""
+}
