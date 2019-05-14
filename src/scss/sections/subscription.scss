@@ -1,0 +1,131 @@
+.subscription{
+  background: #4b3b4e url("../../img/subscription/section4-background.png") no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 57px;
+  padding-bottom: 93px;
+  min-width: 320px;
+  margin: 0;
+  &__heading{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    padding-bottom: 53px;
+  }
+  &__option{
+    width: 257px;
+    height: 457px;
+    margin: 0 auto 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    background-color: #5f5161;
+
+    &_active{
+      width: 290px;
+      height: 560px;
+      background-color: #413344;
+    }
+
+    &-title{
+      display: block;
+      background-color: #695b6a;
+      font-size: 24px;
+      text-transform: uppercase;
+      width: inherit;
+      padding-top: 46px;
+      padding-bottom: 34px;
+      &_active{
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+    }
+    &-price{
+      font-size: 60px;
+      font-weight: 700;
+      padding-top: 32px;
+      &_active{
+        font-size: 82px;
+      }
+      span{
+        font-weight: 400;
+      }
+    }
+    &-condition{
+      font-size: 14px;
+      opacity: 0.3;
+      text-transform: uppercase;
+      padding-top: 24px;
+    }
+    &-license-name{
+      font-size: 16px;
+      line-height: 28px;
+      padding-top: 19px;
+      &_active{
+        line-height: 32px;
+        padding-top: 23px;
+      }
+    }
+  }
+}
+
+.purchase-btn {
+  width: 160px;
+  height: 42px;
+  border-radius: 500px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: auto;
+  margin-bottom: 38px;
+  cursor: pointer;
+  flex-shrink: 0;
+  flex-grow: 0;
+  &:hover{
+    color: #7f6d78;
+    background-color: #d0cbd0;
+    font-weight: 700;
+  }
+  &_active{
+    width: 190px;
+    height: 52px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 47px;
+  }
+}
+
+
+
+.line{
+  width: 60px;
+  height: 5px;
+  background-color: #8d81ac;
+  margin-top: 39px;
+  &_active{
+    margin-top: 49px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .subscription {
+    &__options-block {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    &__option {
+    }
+  }
+}
+
+@media screen and (min-width: 993px){
+
+}
