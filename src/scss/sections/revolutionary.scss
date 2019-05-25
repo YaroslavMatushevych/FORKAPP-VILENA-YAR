@@ -152,7 +152,7 @@
     }
 
     &-title:nth-child(3) {
-      padding-top: 22px;
+      padding-top: 19px;
     }
 
     &-title:nth-child(4) {
@@ -165,7 +165,7 @@
       font-family: 'Lato', sans-serif;
       font-size: 14px;
       line-height: 21px;
-      padding: 16px 14px 37px 18px;
+      padding: 12px 14px 37px 18px;
     }
   }
 }
@@ -174,22 +174,23 @@
 .img1{
   width: 111px;
   height: 64px;
-  background: url("../../img/revolutionary/css_sprites.png") -10px -10px;
+  background: url("../../img/revolutionary/css_sprites.png") -10px -10px no-repeat;
 }
 .img2{
   width: 90px;
   height: 80px;
-  background: url("../../img/revolutionary/css_sprites.png") -10px -185px;
+  background: url("../../img/revolutionary/css_sprites.png") -10px -185px no-repeat;
 }
 .img3{
   width: 100px;
-  height: 84px;
-  background: url("../../img/revolutionary/css_sprites.png") 5px -290px;
+  height: 85px;
+  background: url("../../img/revolutionary/css_sprites.png") 10px -283px no-repeat;
 }
+
 .img4{
   width: 100px;
   height: 71px;
-  background: url("../../img/revolutionary/css_sprites.png") 5px -94px;
+  background: url("../../img/revolutionary/css_sprites.png") 5px -94px no-repeat;
 }
 
 
@@ -226,27 +227,32 @@
       &-items{
         display: flex;
         flex-direction: column;
-        align-items: center;
       }
     }
   }
 
   .item{
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 0 30px 60px;
-    width: 702px;
+    margin: 0 20px 60px;
 
-
+    &-img{
+      width: 111px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-start;
+    }
     &-description{
       align-items: flex-start;
-      width: 566px;
+      margin-left: 22px;
 
       &-title:nth-child(n){
         padding-top: 0;
+        padding-bottom: 12px;
       }
       &-text{
+        font-family: 'Montserrat', sans-serif;
         text-align: left;
         padding: 0;
       }
@@ -265,52 +271,44 @@
       padding-top: 84px;
       padding-bottom: 51px;
       flex-direction: row;
-      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+
+      &-items{
+        width: 45%;
+        padding-top: 16px;
+        margin: 16px 0 0;
+      }
       &-heading{
         display:none;
         &-desktop{
           display: inline;
-          padding: 0;
           color: #8d81ac;
           font-size: 48px;
-          font-weight: 700;
         }
       }
 
       &-img-section{
-        display: flex;
-        flex-direction: column;
+        position: absolute;
+        width: calc(55% + 91px);
+        top: 84px;
+        left: 53%;
         margin: 0 0 54px;
-        height: 573px;
+        text-align: left;
+        padding: 0;
       }
 
       &-img{
+        margin-top: 102px;
         height: 476px;
-        width: 100%;
         left: 0;
-        top: 98px;
       }
       &-img img{
         height: 476px;
       }
     }
   }
-
   .item{
-    width: 502px;
-
-
-    &-description{
-      width: 368px;
-
-      &-title:nth-child(n){
-        padding-top: 0;
-        padding-bottom: 13px;
-      }
-      &-text{
-        text-align: left;
-        padding: 0;
-      }
-    }
+    margin: 0 0 34px;
   }
 }

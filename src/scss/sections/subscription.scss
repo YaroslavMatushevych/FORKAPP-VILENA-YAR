@@ -3,28 +3,31 @@
   background-size: cover;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  padding-top: 57px;
-  padding-bottom: 93px;
   min-width: 320px;
+  padding-top: 73px;
   margin: 0;
   &__heading{
     font-size: 28px;
     font-weight: 700;
     line-height: 42px;
-    padding-bottom: 53px;
+  }
+  &__options-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 53px 0 79px;
   }
   &__option{
     width: 257px;
     height: 457px;
-    margin: 0 auto 14px;
+    margin-bottom: 14px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
-    background-color: #5f5161;
+    background-color: rgba(255, 255, 255, 0.11);
 
     &_active{
       width: 290px;
@@ -114,18 +117,38 @@
 
 @media screen and (min-width: 481px) {
   .subscription {
-    &__options-block {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+    &__heading{
+      font-size: 42px;
     }
-    &__option {
+    &__options-block {
+      flex: 1 1 50%;
+      margin: 0 auto;
+      max-width: 650px;
+      padding: 53px 50px 79px;
+    }
+    &__option{
+      margin: 0 20px 42px;
+    }
+    &__option:nth-child(3){
+      margin: 0 2px 42px;
     }
   }
 }
 
 @media screen and (min-width: 993px){
-
+  .subscription{
+  &__heading{
+    font-size: 48px;
+  }
+    &__options-block {
+      max-width: 1200px;
+      padding: 53px 10px 79px;;
+    }
+    &__option{
+      margin: 0 7px 42px;
+    }
+    &__option:nth-child(3){
+      margin: 0 7px 42px;
+    }
+}
 }
