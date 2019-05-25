@@ -73,7 +73,7 @@ body {
     flex-direction: column;
     position: absolute;
     top: 100px;
-    right: 5%;
+    right: -100%;
     transition: all 0.3s ease-out;
     background-color: #333333;
     width: 90%;
@@ -82,7 +82,6 @@ body {
     z-index: 5;
     align-items: flex-start;
     padding-left: 0;
-    transform: translateX(+150%);
   }
 
   &__button {
@@ -144,7 +143,6 @@ body {
 .dropdown-menu_opened {
   right: 5%;
   transition: all 0.5s ease-out;
-  transform: translateX(0);
 }
 
 .nav-bar__item {
@@ -288,6 +286,11 @@ body {
     cursor: pointer;
     font-weight: 700;
     padding: 0;
+
+    & p {
+      border-left: unset;
+      padding: 0;
+    }
 
     &:hover {
       color: $white;
