@@ -9,6 +9,7 @@ let gulp = require('gulp'),
     terser = require('gulp-terser'),						//minify for js
     rename = require("gulp-rename"),      				//rename files after minify
     imagemin = require('gulp-imagemin'),
+    minifyCss = require('gulp-minify-css'),
     browserSync = require("browser-sync").create();
 
 const path = {
@@ -48,14 +49,15 @@ const scssBuild = () => (
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.css'))
-        .pipe(clean())
+        .pipe(clean({level: 2}))								// minifyCSS after sourcemaps and sass
         .pipe(prefixer({
-            browsers: ['last 100 versions'],
+            browsers: ['> 0.1%'],								// для браузеров которые использует 0.1%
             cascade: false
         }))
-        // .pipe(rename(function (path) {							// function of rename extname for .css
-        //     path.extname = ".min.css";
-        // }))
+        // .pipe(minifyCss())
+        .pipe(rename(function (path) {							// function of rename extname for .css
+            path.extname = ".min.css";
+        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(browserSync.stream())
