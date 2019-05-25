@@ -1,11 +1,11 @@
 .people {
-  background: url("../../img/header/testmonials-bg.png") no-repeat center;
   background-size: cover;
   text-align: center;
-  font-family: "Montserrad", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   min-width: 320px;
-  border-bottom: 2px solid #848e97;
+  background: #4b3b4e url("../../img/header/testmonials-bg.png") no-repeat top;
+  border-bottom: 2px solid #645765;
 
   &__container {
     display: flex;
@@ -14,11 +14,11 @@
     box-sizing: border-box;
     padding: 0 20px;
     max-width: 1200px;
-    margin: 0 auto 10px;
+    margin: 0 auto;
   }
 
   &__heading {
-    font-size: 48px;
+    font-size: 46px;
     margin: 80px 0 20px;
     color: #fff;
     flex-basis: 100%;
@@ -44,7 +44,7 @@
 
   &__companies-text {
     color: $white;
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 25px;
     line-height: 30px;
     font-style: italic;
@@ -52,21 +52,34 @@
 
   &__footer {
     flex-basis: 100%;
-    border-bottom: 2px solid $grey;
     text-align: center;
     display: none;
     margin-top: 50px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  &__footer::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: #645765;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__footer-text {
     font-size: 14px;
-    color: $grey;
+    color: #938396;
   }
 }
 
 @media (min-width: 481px) {
 
   .people {
+    border-bottom: unset;
 
     &__container {
       justify-content: space-between;
@@ -85,6 +98,10 @@
       padding-top: 35px;
     }
 
+    &__companies:nth-child(7) {
+      padding-bottom: 0;
+    }
+
     &__heading {
       margin: 80px 0 0;
     }
@@ -98,8 +115,13 @@
     }
 
     &__footer {
-
       display: block;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    &__footer::after {
+      width: 95%;
     }
   }
 }
@@ -114,6 +136,12 @@
       &__companies {
         flex-basis: 29%;
         padding-top: 80px;
+      }
+
+      &__footer {
+        margin: 50px 150px 0 150px;
+        padding-right: 0;
+        padding-left: 0;
       }
     }
   }
