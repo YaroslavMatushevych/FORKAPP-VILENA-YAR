@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap;
     box-sizing: border-box;
     position: relative;
-    padding: 0 20px;
+    padding: 0 10px;
     max-width: 1200px;
     margin: 0 auto;
     height: 100px; }
@@ -183,7 +183,7 @@ body {
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     position: relative;
-    padding: 0 20px;
+    padding: 0 10px;
     max-width: 1200px;
     margin: 0 auto; }
   .promo__heading {
@@ -224,7 +224,7 @@ body {
 
 @media (min-width: 481px) {
   .header__container {
-    padding: 0 20px;
+    padding: 0 10px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
@@ -651,7 +651,7 @@ body {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 10px;
     max-width: 1200px;
     margin: 0 auto; }
   .people__heading {
