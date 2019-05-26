@@ -37,7 +37,7 @@ body {
 
   &__logo-img{
     display: inline-block;
-    background: url('../../img/header/logo-sprite.png') no-repeat;
+    background: url('../img/header/logo-sprite.png') no-repeat;
     overflow: hidden;
     text-indent: -9999px;
     text-align: left;
@@ -176,7 +176,7 @@ body {
 
 /////////PROMO SECTION
 .promo {
-  background: url("../../img/header/promo.png") no-repeat center;
+  background: url("../img/header/promo.png") no-repeat center;
   background-size: cover;
   height: 600px;
   text-align: center;
