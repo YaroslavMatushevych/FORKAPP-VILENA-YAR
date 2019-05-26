@@ -45,16 +45,14 @@ const htmlBuild = () => (
 );
 
 const scssBuild = () => (
-    gulp.src(path.src.style)
+    gulp.src('./src/scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat('style.css'))
         .pipe(clean({level: 2}))								// minifyCSS after sourcemaps and sass
         .pipe(prefixer({
             browsers: ['> 0.1%'],								// для браузеров которые использует 0.1%
             cascade: false
         }))
-        // .pipe(minifyCss())
         .pipe(rename(function (path) {							// function of rename extname for .css
             path.extname = ".min.css";
         }))
